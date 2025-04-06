@@ -21,7 +21,7 @@ const HeroSection = () => {
             Stay Informed
           </button>
         </div>
-        <div className="flex justify-between w-3/4 lg:w-3/5 maxw-[900px]">
+        <div className="hidden md:flex felx-row justify-between w-3/4 lg:w-3/5 maxw-[900px]">
           <HighlightItem title="Projected Range" content="Over 440 mi" />
           <div className="h-full w-[2px] bg-white/50" />
           <HighlightItem title="Peak Power" content="Over 800 hp" />
