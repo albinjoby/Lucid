@@ -5,6 +5,8 @@ import BgInereior from "@/../public/bg-interior.jpeg";
 import BgCharging from "@/../public/bg-charging.jpeg";
 import BgConnectivity from "@/../public/bg-connectivity.jpeg";
 import BgSafety from "@/../public/bg-safety.jpeg";
+import { useEffect } from "react";
+import Lenis from "lenis";
 
 const features = [
   {
@@ -46,6 +48,17 @@ const features = [
 
 
 export default function Home() {
+
+  useEffect(()=>{
+    const lenis = new Lenis();
+    function raf(time: any) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  },[])
+
   return (
     <main className="min-h-screen">
       <HeroSection />
